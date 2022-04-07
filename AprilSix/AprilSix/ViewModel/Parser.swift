@@ -11,7 +11,7 @@ struct Parser{
     
     func parse(comp : @escaping ([Item])->()) {
         
-        let api = URL(string: "https://api.github.com/search/users?q=manish")
+        let api = URL(string: "https://api.github.com/search/users?q=varun")
         
         URLSession.shared.dataTask(with: api!) {
             data, response, error in

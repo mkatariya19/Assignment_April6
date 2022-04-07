@@ -16,6 +16,8 @@
 		180DC5B227FD9FDE0064864A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180DC5B027FD9FDE0064864A /* LaunchScreen.storyboard */; };
 		180DC5BB27FDA0940064864A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180DC5BA27FDA0940064864A /* User.swift */; };
 		180DC5BE27FDA5210064864A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180DC5BD27FDA5210064864A /* Parser.swift */; };
+		180DC5C227FF68520064864A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180DC5C127FF68520064864A /* DetailViewController.swift */; };
+		180DC5C427FF71880064864A /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180DC5C327FF71880064864A /* Show.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		180DC5B327FD9FDE0064864A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180DC5BA27FDA0940064864A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		180DC5BD27FDA5210064864A /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		180DC5C127FF68520064864A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		180DC5C327FF71880064864A /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				180DC5B927FDA0510064864A /* Model */,
 				180DC5A227FD9FDC0064864A /* AppDelegate.swift */,
 				180DC5A427FD9FDC0064864A /* SceneDelegate.swift */,
+				180DC5C327FF71880064864A /* Show.swift */,
 				180DC5AE27FD9FDE0064864A /* Assets.xcassets */,
 				180DC5B027FD9FDE0064864A /* LaunchScreen.storyboard */,
 				180DC5B327FD9FDE0064864A /* Info.plist */,
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				180DC5A627FD9FDC0064864A /* ViewController.swift */,
+				180DC5C127FF68520064864A /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 				180DC5A327FD9FDC0064864A /* AppDelegate.swift in Sources */,
 				180DC5BB27FDA0940064864A /* User.swift in Sources */,
 				180DC5A527FD9FDC0064864A /* SceneDelegate.swift in Sources */,
+				180DC5C427FF71880064864A /* Show.swift in Sources */,
+				180DC5C227FF68520064864A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

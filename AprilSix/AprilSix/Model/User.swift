@@ -15,5 +15,13 @@ struct Root: Codable {
 }
 
 struct Item: Codable{
-    let login, node_id, type:String
+    var login:String
+    var node_id:String
+    var type:String
+    var score:Double?
+    var image: Image?
+    
+}
+struct Image: Codable{
+    var orignal: String?
 }
