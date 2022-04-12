@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,11 +24,28 @@ class ViewController: UIViewController {
             self.items = data
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.searchBar()
             }
             
         }
         tableView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    func searchBar() {
+        
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
+        searchBar.delegate = self
+        searchBar.showsScopeBar = true
+        searchBar.tintColor = UIColor.lightGray
+        searchBar.scopeButtonTitles = ["login",  "node_id"]
+        self.tableView.tableHeaderView = searchBar
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            
+            
+        }
     }
 
 
@@ -45,23 +62,15 @@ extension ViewController : UITableViewDataSource {
         cell.textLabel?.text = items[indexPath.row].login
         
         
+        
         if let score = items[indexPath.row].score
             {
             cell.detailTextLabel?.text = "\(score)"
         } else{
             cell.detailTextLabel?.text = "-"
         }
-        let image = UIImageView()
-        cell.imageView?.image = image
         return cell
         
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as? DetailViewController
-        let selectedIndexPath = tableView.indexPathForSelectedRow!
-        destination?.items = Item.Array[selectedIndexPath.row].items
         
     }
     
