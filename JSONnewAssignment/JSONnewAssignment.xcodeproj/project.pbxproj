@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1880BE482813F695009B2CD3 /* moreDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880BE472813F695009B2CD3 /* moreDetails.swift */; };
 		18E615262805F38000C8EC8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E615252805F38000C8EC8A /* AppDelegate.swift */; };
 		18E615282805F38000C8EC8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E615272805F38000C8EC8A /* SceneDelegate.swift */; };
 		18E6152A2805F38000C8EC8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E615292805F38000C8EC8A /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1880BE472813F695009B2CD3 /* moreDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreDetails.swift; sourceTree = "<group>"; };
 		18E615222805F38000C8EC8A /* JSONnewAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONnewAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E615252805F38000C8EC8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E615272805F38000C8EC8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				18E615362805F38100C8EC8A /* Info.plist */,
 				18E6152E2805F38000C8EC8A /* JSONnewAssignment.xcdatamodeld */,
 				18E6158A280603EB00C8EC8A /* oneTableViewCell.swift */,
+				1880BE472813F695009B2CD3 /* moreDetails.swift */,
 			);
 			path = JSONnewAssignment;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				18E6158B280603EB00C8EC8A /* oneTableViewCell.swift in Sources */,
 				18E615282805F38000C8EC8A /* SceneDelegate.swift in Sources */,
 				18E615302805F38000C8EC8A /* JSONnewAssignment.xcdatamodeld in Sources */,
+				1880BE482813F695009B2CD3 /* moreDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

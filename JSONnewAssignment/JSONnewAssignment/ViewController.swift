@@ -9,6 +9,8 @@ import UIKit
 class ViewController: UIViewController,UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
   @IBOutlet weak var tableView: UITableView!
  
+    
+    var newlogin: String?
   var y : String?
   @IBOutlet weak var searchBar: UISearchBar!
     var userData = [Items]()
@@ -42,6 +44,7 @@ class ViewController: UIViewController,UISearchBarDelegate, UITableViewDelegate,
       let imageData = try! Data(contentsOf: imageUrl)
       let image = UIImage(data: imageData)
       cell.image1?.image = image
+      cell.isHidden = indexPath.row > 20
       return cell
     }
     func ParsingJson(comletion: @escaping ([Items])->()){
@@ -57,18 +60,33 @@ class ViewController: UIViewController,UISearchBarDelegate, UITableViewDelegate,
         if error == nil, data != nil{
           let decoder = JSONDecoder()
           do {
-          let ParsingData = try decoder.decode(Gitapi.self, from: data!)
+          let ParsingData = try decoder.decode(Myapi.self, from: data!)
             comletion(ParsingData.items)
           }
           catch {
-            print("Parsing Error")
+            print(" Error")
+              DispatchQueue.main.async(execute: {
+             
+                  let dialogMessage = UIAlertController(title: "No results ", message: "later ?", preferredStyle: .alert)
+                  
+                 
+                  let ok = UIAlertAction(title: "Search", style: .default, handler: { (action) -> Void in
+                      print("Ok button tapped")
+                   })
+                  
+                  
+                  dialogMessage.addAction(ok)
+
+                  
+                  self.present(dialogMessage, animated: true, completion: nil)
+               })
           }
         }
       }
       dataTask.resume()
     }
   }
-  struct Gitapi : Decodable {
+  struct Myapi : Decodable {
     var total_count : Int
     var items : [Items]
   }
@@ -77,4 +95,8 @@ class ViewController: UIViewController,UISearchBarDelegate, UITableViewDelegate,
     var login : String
     var score : Int
     var url : URL
+    var id : Int
+    var node_id : String
+    var repos_url : URL
+    var type : String
   }
